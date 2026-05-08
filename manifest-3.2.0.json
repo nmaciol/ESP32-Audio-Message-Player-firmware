@@ -7,7 +7,7 @@
       "parts": [
         { "path": "firmware/3.2.0/bootloader.bin", "offset": 4096 },
         { "path": "firmware/3.2.0/partitions.bin", "offset": 32768 },
-        { "path": "firmware/3.2.0/bootloader.bin", "offset": 65536 }
+        { "path": "firmware/3.2.0/firmware.bin", "offset": 65536 }
       ]
     }
   ]
