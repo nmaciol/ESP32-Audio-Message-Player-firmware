@@ -107,16 +107,22 @@ function closeEbayPopup() {
 
     
     <div class="section">
-      <h3>🚀 One-Click Installation</h3>
+      <h3>🚀 One-Click Firmware Flashing</h3>
       <esp-web-install-button manifest="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware//manifest-3.2.0.json">
         <button slot="activate" class="button primary">
-          Install Firmware v3.2.0
+          v3.2.0
         </button>
       </esp-web-install-button>
 
       <esp-web-install-button manifest="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware//manifest-5.1.0.json">
         <button slot="activate" class="button primary">
-          Install Firmware v5.1.0 latest
+          v5.1.0
+        </button>
+      </esp-web-install-button>
+
+      <esp-web-install-button manifest=".//manifest-5.1.2.json">
+        <button slot="activate" class="button primary">
+          v5.1.2 latest
         </button>
       </esp-web-install-button>
 
@@ -129,21 +135,21 @@ function closeEbayPopup() {
   
     <div class="section">
      
-      <a href="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware/firmware/3.2.0/sd-card-content.zip" download class="button secondary">
+      <a href=".firmware/3.2.0/sd-card-content.zip" download class="button secondary">
         Download the content to the SD card v3.2.0(ZIP)
       </a>
       
-      <a href="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware/firmware/5.1.0/SD-Card-content.zip" download class="button secondary">
-        Download the content to the SD card v5.1.0(ZIP)
+      <a href="./firmware/5.1.2/SD-Card-content.zip" download class="button secondary">
+        Download the content to the SD card v5.1.x(ZIP)
       </a>
       <p style="font-size:13px; color:#888;">
         The “app.json” file must be configured.
       </p>
 
-      <a href="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware/firmware/5.1.0/CHANGELOG.pdf" download ">
+      <a href="./firmware/5.1.2/CHANGELOG.pdf" download ">
         Download the CHANGELOG.pdf
       </a>&nbsp;|&nbsp;
-      <a href="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware/firmware/5.1.0/Q&A.pdf" download >
+      <a href="./firmware/5.1.0/Q&A.pdf" download >
         Q&A.pdf with Troubleshooting
       </a>
       <p>
@@ -400,7 +406,7 @@ function closeEbayPopup() {
 <footer style="text-align:center; padding:0px; color:#3a3939;">
 
 <p style="margin:0 0 10px 0; font-size:16px;">
-  ☕ Support the project via BuyMeACoffee or 🛒 get prebuilt hardware on eBay.
+  ☕ Support the project via 🛒 get prebuilt hardware on eBay.
 </p>
 
 
@@ -421,18 +427,6 @@ function closeEbayPopup() {
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     font-family:Arial,sans-serif;
 ">
-
-
-  <a href="https://buymeacoffee.com/nmaciol" target="_blank" rel="noopener noreferrer">
-    <img 
-      src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
-      height="45" 
-      alt="Buy Me a Coffee"
-      style=" border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,0.25); transition:0.2s;"
-      onmouseover="this.style.transform='scale(1.05)'"
-      
-    />
-  </a>
 
     <!-- eBay Button -->
   <button onclick="openEbayPopup()" style="
