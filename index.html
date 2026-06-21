@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ESP32 PowaDCR </title>
+  <title>ESP32 Audio Message Player for SmartHome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ESP Web Tools -->
@@ -103,14 +103,26 @@ function closeEbayPopup() {
 
   <div class="container">
 
-    <h2>Professional Digital Cassette Recorder for 8-bit Machines<br> <h3>Open-Source Firmware for ESP32-A1S</h3></h2>
+    <h2>Audio Message Player <br> <h3>Open-Source Firmware for ESP32-A1S</h3></h2>
 
     
     <div class="section">
       <h3>🚀 One-Click Firmware Flashing</h3>
-      <esp-web-install-button manifest="./manifest-1.0r7.14.json">
+      <esp-web-install-button manifest="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware//manifest-3.2.0.json">
         <button slot="activate" class="button primary">
-          v1.0r7.14
+          v3.2.0
+        </button>
+      </esp-web-install-button>
+
+      <esp-web-install-button manifest="https://nmaciol.github.io/ESP32-Audio-Message-Player-firmware//manifest-5.1.0.json">
+        <button slot="activate" class="button primary">
+          v5.1.0
+        </button>
+      </esp-web-install-button>
+
+      <esp-web-install-button manifest=".//manifest-5.1.2.json">
+        <button slot="activate" class="button primary">
+          v5.1.2 latest
         </button>
       </esp-web-install-button>
 
@@ -123,34 +135,315 @@ function closeEbayPopup() {
   
     <div class="section">
      
-      <a href="./firmware/1.0r7.14/HMI/TJC4832K035_011.zip" download class="button secondary">
-        Download the TJC4832K035_011.tft for the SD card v1.0r7.14
+      <a href=".firmware/3.2.0/sd-card-content.zip" download class="button secondary">
+        Download the content to the SD card v3.2.0(ZIP)
       </a>
       
-      <a href=".firmware/1.0r7.14/HMI/TJC4832T035_011.zip" download class="button secondary">
-        Download the TJC4832T035_011.tft for the SD card  v1.0r7.14
+      <a href="./firmware/5.1.2/SD-Card-content.zip" download class="button secondary">
+        Download the content to the SD card v5.1.x(ZIP)
       </a>
-      <a href="./firmware/1.0r7.14/HMI/TJC4832T135_011.zip" download class="button secondary">
-        Download the TJC4832T135_011.tft for the SD card 1.0r7.14
-      </a>
+      <p style="font-size:13px; color:#888;">
+        The “app.json” file must be configured.
+      </p>
 
+      <a href="./firmware/5.1.2/CHANGELOG.pdf" download ">
+        Download the CHANGELOG.pdf
+      </a>&nbsp;|&nbsp;
+      <a href="./firmware/5.1.0/Q&A.pdf" download >
+        Q&A.pdf with Troubleshooting
+      </a>
       <p>
         Open Source Project – 
-      <a href="https://github.com/hash6iron/powadcr/tree/main" target="_blank">GitHub</a>.
+      <a href="https://github.com/nmaciol/ESP32-Audio-Message-Player-main" target="_blank">GitHub</a>.
         View on GitHub
       </a>
       </p>
       <p>
+      <p>
+        Go to
+        <a href="https://github.com/nmaciol/ESP32-Audio-Message-Player-main/discussions/1" target="_blank">
+          💬 GitHub Discussions
+        </a>
+        for questions, support, and sharing.
+      </p>
+
 
     </div>
+
+    <div class="section">
+      <h3>✨ Features</h3>
+      <p>
+        • MQTT-controlled audio playback<br>
+        • Offline text-to-speech support through reuse of identical text<br>
+        • Audio error messages on boot<br>
+        • and much more<br>
+      </p>
+    </div>
+
+
+<!-- OPEN BUTTON -->
+
+<!-- POPUP -->
+<div id="ebayPopup" style="
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:360px;
+    max-width:90%;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.35);
+    padding:22px;
+    z-index:9999;
+    font-family:Arial,sans-serif;
+">
+
+    <!-- HEADER -->
+    <div style="
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        margin-bottom:18px;
+    ">
+        <h3 style="
+            margin:0;
+            color:#222;
+            font-size:22px;
+        ">
+            Available Hardware
+        </h3>
+
+        <button onclick="closeEbayPopup()" style="
+            border:none;
+            background:none;
+            font-size:24px;
+            cursor:pointer;
+            color:#666;
+        ">
+            ×
+        </button>
+    </div>
+
+    <!-- ITEM 1 -->
+    <a href="https://www.ebay.de/itm/127834625483"
+       target="_blank"
+       style="
+          display:flex;
+          align-items:center;
+          gap:14px;
+          margin-bottom:14px;
+          padding:14px;
+          text-decoration:none;
+          background:#f6f7fb;
+          border-radius:14px;
+          transition:0.2s;
+       "
+       onmouseover="this.style.transform='scale(1.02)'"
+       onmouseout="this.style.transform='scale(1)'">
+
+       <div style="
+            width:56px;
+            height:56px;
+            border-radius:12px;
+            background:#e53238;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:26px;
+       ">
+          <img src="images/ESP32-with-ipex-120.png" alt="ESP32 with IPEX Antenna" style="width:28px; height:28px;">
+
+       </div>
+
+       <div>
+           <div style="
+                color:#222;
+                font-weight:bold;
+                margin-bottom:4px;
+           ">
+               ESP32-A1S Audio-Message-Player   2×3 W
+           </div>
+
+           <div style="
+                color:#777;
+                font-size:13px;
+           ">
+               ext Antenne version
+           </div>
+       </div>
+    </a>
+
+    <!-- ITEM 2 -->
+    <a href="https://www.ebay.de/itm/127930870736"
+       target="_blank"
+       style="
+          display:flex;
+          align-items:center;
+          gap:14px;
+          margin-bottom:14px;
+          padding:14px;
+          text-decoration:none;
+          background:#f6f7fb;
+          border-radius:14px;
+          transition:0.2s;
+       "
+       onmouseover="this.style.transform='scale(1.02)'"
+       onmouseout="this.style.transform='scale(1)'">
+
+       <div style="
+            width:56px;
+            height:56px;
+            border-radius:12px;
+            background:#0064d2;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:26px;
+       ">
+           <img src="images/ESP32-with-ipex-4MB-120.png" alt="ESP32 with Integrated Antenna" style="width:28px; height:28px;">
+       </div>
+
+       <div>
+           <div style="
+                color:#222;
+                font-weight:bold;
+                margin-bottom:4px;
+           ">
+              ESP32-A1S Audio-Message-Player,  2×3 W
+           </div>
+
+           <div style="
+                color:#777;
+                font-size:13px;
+           ">
+               Integrated Antenne
+           </div>
+       </div>
+    </a>
+
+    <!-- ITEM 3 -->
+    <a href="https://www.ebay.de/itm/127868587560"
+       target="_blank"
+       style="
+          display:flex;
+          align-items:center;
+          gap:14px;
+          margin-bottom:14px;
+          padding:14px;
+          text-decoration:none;
+          background:#f6f7fb;
+          border-radius:14px;
+          transition:0.2s;
+       "
+       onmouseover="this.style.transform='scale(1.02)'"
+       onmouseout="this.style.transform='scale(1)'">
+
+       <div style="
+            width:56px;
+            height:56px;
+            border-radius:12px;
+            background:#0064d2;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            font-size:26px;
+       ">
+           <img src="images/PIR-for-ESP32-A1S-120px.png" alt="ESP32 with Integrated Antenna" style="width:28px; height:28px;">
+       </div>
+
+       <div>
+           <div style="
+                color:#222;
+                font-weight:bold;
+                margin-bottom:4px;
+           ">
+              PIR Sensor and 2x7 Header Socket for ESP32-A1S
+           </div>
+
+           <div style="
+                color:#777;
+                font-size:13px;
+           ">
+              Hardware for motion-activated audio playback. 
+           </div>
+       </div>
+    </a>
+
+
+    <!-- FOOTER -->
+    <div style="
+        margin-top:10px;
+        text-align:center;
+        color:#888;
+        font-size:12px;
+    ">
+        Open Source • DIY • ESP32
+    </div>
+
+</div>
+
+<!-- OVERLAY -->
+<div id="ebayOverlay" onclick="closeEbayPopup()" style="
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:9998;
+"></div>
+
+<!-- SCRIPT -->
+
 
 
 <footer style="text-align:center; padding:0px; color:#3a3939;">
 
+<p style="margin:0 0 10px 0; font-size:16px;">
+  ☕ Support the project via 🛒 get prebuilt hardware on eBay.
+</p>
 
 
 
 
+<div style="
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:14px;
+    padding:18px;
+    margin:20px auto;
+    max-width:700px;
+    background:#f8f9fb;
+    border:1px solid #dfe3ea;
+    border-radius:18px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    font-family:Arial,sans-serif;
+">
+
+    <!-- eBay Button -->
+  <button onclick="openEbayPopup()" style="
+      padding:12px 22px;
+      border:none;
+      border-radius:12px;
+      background:linear-gradient(135deg,#e53238,#0064d2);
+      color:white;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      box-shadow:0 4px 10px rgba(0,0,0,0.25);
+  ">
+      🛒 Buy Hardware
+  </button>
+
+</div>
 
 
 </footer>
